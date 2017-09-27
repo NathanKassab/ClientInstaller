@@ -77,49 +77,36 @@ public class Frame {
 					
 					String labellText = "<html><br><br><br><br>Status: " + status + "</html>";
 					waitingLabel.setText(labellText);
-					int delay = 0;
-					while(true){
-						if(delay < 100000){
-							delay++;
-							status = "Installed!";
-							
-							waitingLabel.setText(labellText);
-						}else{
-							File file = new File(Referances.CLIENT_FOLDER);
-							if(!file.exists()){
-								System.out.println("Creating file " + Referances.CLIENT_FOLDER);
-								file.mkdir();
-							}
-							
-							try {
-								Installer.saveFile(Referances.JSON_LINK, Referances.JSON_FILE);
-								System.out.println("Searching file " + Referances.JSON_FILE);
-								String content = FileUtils.readFileToString(new File(Referances.JSON_FILE), "UTF-8");
-								System.out.println("Replacing content (Replacing \"ClientName\" for \"" + Referances.CLIENT_NAME + "\"");
-							    content = content.replaceAll("ClientName", Referances.CLIENT_NAME);
-							    System.out.println("Setting tempFile...");
-							    File tempFile = new File(Referances.JSON_FILE);
-							    System.out.println("Replacing file " + Referances.JSON_FILE + " with New one!");
-							    FileUtils.writeStringToFile(tempFile, content, "UTF-8");
-							} catch (IOException e) {
-								e.printStackTrace();
-							}
-							
-							try {
-								Installer.saveFile(Referances.JAR_LINK, Referances.JAR_FILE);
-							} catch (IOException e){
-								e.printStackTrace();
-							}
-							
-//							DownloadFinishFrame.create();
-//							frame.setVisible(false);
-							status = "Installed!";
-							waitingLabel.setText(labellText);
-							button.setEnabled(false);
-							installed = true;
-							break;
-						}
+					
+					File file = new File(Referances.CLIENT_FOLDER);
+					if(!file.exists()){
+						System.out.println("Creating file " + Referances.CLIENT_FOLDER);
+						file.mkdir();
 					}
+					
+					try {
+						Installer.saveFile(Referances.JSON_LINK, Referances.JSON_FILE);
+						System.out.println("Searching file " + Referances.JSON_FILE);
+						String content = FileUtils.readFileToString(new File(Referances.JSON_FILE), "UTF-8");
+						System.out.println("Replacing content (Replacing \"ClientName\" for \"" + Referances.CLIENT_NAME + "\"");
+					    content = content.replaceAll("ClientName", Referances.CLIENT_NAME);
+					    System.out.println("Setting tempFile...");
+					    File tempFile = new File(Referances.JSON_FILE);
+					    System.out.println("Replacing file " + Referances.JSON_FILE + " with New one!");
+					    FileUtils.writeStringToFile(tempFile, content, "UTF-8");
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					
+					try {
+						Installer.saveFile(Referances.JAR_LINK, Referances.JAR_FILE);
+					} catch (IOException e){
+						e.printStackTrace();
+					}
+					
+					waitingLabel.setText(labellText);
+					button.setEnabled(false);
+					installed = true;
 				}
 			}
 			
