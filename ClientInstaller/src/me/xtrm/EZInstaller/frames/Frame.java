@@ -62,7 +62,7 @@ public class Frame {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
-		frame.setTitle(Referances.CLIENT_NAME + " Client Installer");
+		frame.setTitle(Referances.ClientName + " Client Installer");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		button = new JButton("Install");
@@ -88,8 +88,8 @@ public class Frame {
 						Installer.saveFile(Referances.JSON_LINK, Referances.JSON_FILE);
 						System.out.println("Searching file " + Referances.JSON_FILE);
 						String content = FileUtils.readFileToString(new File(Referances.JSON_FILE), "UTF-8");
-						System.out.println("Replacing content (Replacing \"ClientName\" for \"" + Referances.CLIENT_NAME + "\"");
-					    content = content.replaceAll("ClientName", Referances.CLIENT_NAME);
+						System.out.println("Replacing content (Replacing \"ClientName\" for \"" + Referances.ClientName + "\"");
+					    content = content.replaceAll("ClientName", Referances.ClientName);
 					    System.out.println("Setting tempFile...");
 					    File tempFile = new File(Referances.JSON_FILE);
 					    System.out.println("Replacing file " + Referances.JSON_FILE + " with New one!");
@@ -99,7 +99,7 @@ public class Frame {
 					}
 					
 					try {
-						Installer.saveFile(Referances.JAR_LINK, Referances.JAR_FILE);
+						Installer.saveFile(Referances.JarLink, Referances.JAR_FILE);
 					} catch (IOException e){
 						e.printStackTrace();
 					}
@@ -131,7 +131,7 @@ public class Frame {
 		panelDownload = new JPanel();
 		panelDownload.setVisible(true);
 		
-		String labelText = "<html>Welcome to the " + Referances.CLIENT_NAME + " Installer. Click on the \"Install\" <br>button to install the client to your .minecraft/versions folder<br><br><br>AppData: " + Referances.APPDATA + "<br>.minecraft/versions: " + Referances.VERSIONS_FOLDER + "</html>";
+		String labelText = "<html>Welcome to the " + Referances.ClientName + " Installer. Click on the \"Install\" <br>button to install the client to your .minecraft/versions folder<br><br><br>AppData: " + Referances.APPDATA + "<br>.minecraft/versions: " + Referances.VERSIONS_FOLDER + "</html>";
 		label = new JLabel(labelText);
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		
