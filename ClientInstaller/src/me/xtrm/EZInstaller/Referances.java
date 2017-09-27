@@ -19,7 +19,7 @@ public class Referances {
 	public static final String CLIENT_FOLDER = VERSIONS_FOLDER + "\\" + CLIENT_NAME;
 	
 	public static final String JSON_FILE = Referances.CLIENT_FOLDER + "\\" + Referances.CLIENT_NAME + ".json";
-	public static final String JSON_LINK = "https://pastebin.com/raw/DhUyKWta";
+	public static final String JSON_LINK = "https://pastebin.com/raw/DhUyKWta"; // DO NOT TOUCH THIS! It will automaticly update itself with the CLIENT_NAME var
 	
 	public static final String JAR_FILE = Referances.CLIENT_FOLDER + "\\" + Referances.CLIENT_NAME + ".jar";
 
