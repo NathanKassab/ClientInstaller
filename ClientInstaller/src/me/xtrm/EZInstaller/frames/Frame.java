@@ -133,7 +133,6 @@ public class Frame {
 		
 		String labelText = "<html>Welcome to the " + Referances.ClientName + " Installer. Click on the \"Install\" <br>button to install the client to your .minecraft/versions folder<br><br><br>AppData: " + Referances.APPDATA + "<br>.minecraft/versions: " + Referances.VERSIONS_FOLDER + "</html>";
 		label = new JLabel(labelText);
-		label.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		String labellText = "<html><br><br><br>Status: " + status + "</html>";
 		waitingLabel = new JLabel(labellText);
