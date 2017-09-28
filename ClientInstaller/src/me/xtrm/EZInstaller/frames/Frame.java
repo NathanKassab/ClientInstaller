@@ -145,8 +145,8 @@ public class Frame {
 		panelDownload.add(button, BorderLayout.SOUTH);
 		panelDownload.add(buttonQuit, BorderLayout.SOUTH);
 		
-		frame.getContentPane().add(panel);
-		frame.getContentPane().add(panelDownload, BorderLayout.SOUTH);
+		frame.add(panel);
+		frame.add(panelDownload, BorderLayout.SOUTH);
 	}
 
 }
