@@ -1,5 +1,5 @@
 # ClientInstaller
-A (simple) OpenSource Minecraft Hacked Client Installer
+A (simple) (shit) OpenSource Minecraft Client Installer
 
 # English
 ## How to use?
