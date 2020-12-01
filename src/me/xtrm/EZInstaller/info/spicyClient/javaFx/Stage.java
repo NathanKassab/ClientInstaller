@@ -75,6 +75,7 @@ public class Stage extends Application implements Initializable {
     	
     	InfoBox.setY(InfoBox.getY() - 20);
     	InfoBox.setText("Installer will close when download is complete");
+    	installButton.setText("Installing...");
 		installButton.setDisable(true);
 		new Thread().start();
 		

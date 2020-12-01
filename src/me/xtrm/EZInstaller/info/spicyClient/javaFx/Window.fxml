@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.xtrm.EZInstaller.info.spicyClient.javaFx.Stage">
    <children>
-      <Button fx:id="installButton" layoutX="63.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#startInstaller" prefHeight="74.0" prefWidth="184.0" text="Install SpicyClient">
+      <Button fx:id="installButton" layoutX="63.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#startInstaller" prefHeight="74.0" prefWidth="184.0" style="-fx-background-color: #4287f5;" text="Install SpicyClient" textFill="WHITE">
          <font>
             <Font size="19.0" />
          </font>

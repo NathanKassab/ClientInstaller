@@ -2,7 +2,6 @@ package me.xtrm.EZInstaller;
 
 import java.io.IOException;
 
-import me.xtrm.EZInstaller.frames.*;
 import me.xtrm.EZInstaller.info.spicyClient.javaFx.Stage;
 
 /**
